@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <script>
+      function encontrarMenor(primeiro, segundo, terceiro) {
+        var menor = 0;
+        if (primeiro < segundo && primeiro < terceiro) {
+          menor = primeiro;
+        } else if (segundo < primeiro && segundo < terceiro) {
+          menor = segundo;
+        } else {
+          menor = terceiro;
+        }
+        return menor;
+      }
+
+      function encontrarMedia(primeiro, segundo, terceiro) {
+        return (primeiro + segundo + terceiro) / 3.0;
+      }
+
+      function somaTres(primeiro, segundo, terceiro) {
+        return primeiro + segundo + terceiro;
+      }
+
+      function ehPar(numero) {
+        return numero % 2 === 0;
+      }
+
+      function ehMaiorQue(primeiro, segundo) {
+        return primeiro > segundo;
+      }
+
+      function ehDivisivelPor(primeiro, segundo) {
+        return primeiro % segundo === 0;
+      }
+
+      // function multiplica(primeiro, segundo) {
+      //   var acumulador = 0;
+      //   if (primeiro < segundo) {
+      //     for (var i = 0; i < segundo; i++) {
+      //     acumulador += primeiro;
+      //   }
+      //   } else if (primeiro > segundo) {
+      //     for (var i = 0; i < menor; i++) {
+      //     acumulador += maior;
+      //   }
+      //   }
+      //   return acumulador;
+
+      function multiplica(primeiro, segundo) {
+        var acumulador = 0;
+        var maior = primeiro;
+        var menor = segundo;
+        if (primeiro < segundo) {
+          maior = segundo;
+          menor = primeiro;
+        }
+        for (var i = 0; i < menor; i++) {
+          acumulador += maior;
+          console.log(acumulador);
+        }
+        return acumulador;
+      }
+    </script>
+  </body>
+</html>
